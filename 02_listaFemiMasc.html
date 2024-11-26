@@ -8,10 +8,21 @@
     //ENTRADA
 
     //PROCESSAMENTO
+    let listaM = [];
+    let listaF =[]
     let listaDeNomes = ["João", "Maria", "José", "Amanda", "Beatriz", "Júlio", "Olívia"];
     for(let item of listaDeNomes){
-        document.write(`${item} é Masculino (M) ou Feminino (F))
+        let mOuF = prompt(`${item} é Masculino (M) ou Feminino (F)?`);
+        switch (mOuF) {
+            case "M":
+                listaM.push(item);
+                break;
+            case "F":
+                listaF.push(item);
+                break;
+        }
     }
     //SAÍDA
+    document.write(`A lista de nomes masculinos é: <li>${listaM.join("<li>")}<br>A lista de nomes femininos é: <li>${listaF.join("<li>")}`);
 
 </script>

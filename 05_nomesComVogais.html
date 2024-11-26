@@ -7,8 +7,69 @@
 
     //ENTRADA
 
+    let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
+
     //PROCESSAMENTO
+
+    let vogais = ["A", "E", "I", "O", "U"];
+    let listaVogais = [];
+
+    for (const palavra of listaDeNomes) {
+            let firstCaracter = palavra.substr(0, 1);
+        for (const vogal of vogais) {
+            if (vogal == firstCaracter) {
+                listaVogais.push(palavra);
+            }
+        }
+    }
+
+    listaVogais.sort();
 
     //SAÍDA
 
+    document.write(`<body><header><p class="livre">Estavamos com tempo livre</header><main><div class = "a"><div><p class = "titulo"><strong>Nomes que iniciam com vogal:</strong></p> <li>${listaVogais.join("<li>")} </div> <div><br><img src="AEIOU.png" alt="imagem"></div></div></main><footer><p class = "direitos" >Alguns direitos reservados<br>Maria Clara Pavanello Giareta e Pedro Grabriel Gonçalves.</p></footer><body> `);
+
 </script>
+<style>
+    body {
+        background-color: #f2f2fa;
+    }
+    li {
+        font-size: 2rem;
+        color: #7751ddfd;
+    }
+    div.a {
+        display: flex;
+        justify-content: center;
+    }
+    p.titulo{
+        color: #7751ddfd;
+        font-size: 2.5rem;
+    }
+    img {
+        margin-top: 9vw;
+        margin-left: 2vw;
+        border: solid, ;
+        border-color: #7751ddfd;
+    }
+    p.direitos{
+        text-align: center;
+        color: #ffffff;
+        font-size: 2vw;
+    }
+    footer{
+        background-color: #ac71e0;
+        padding:2vw 2vw 2vw 2vw ;
+        margin-top: 4vw;
+    }
+    header{
+        background-color:#ac71e0;
+        padding:3vw 3vw 3vw 3vw ;
+        font-size: 3rem;
+        text-align: center;
+    }
+    p.livre{
+        color: #ffffff;
+    }
+
+</style>
